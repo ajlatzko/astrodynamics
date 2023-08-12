@@ -7,3 +7,5 @@ from .quaternion import *
 from .classdefs import CelestialBody
 from .classdefs import Orbit
 from .LambertSolver import LambertSolver
+from .groundtrack import *
+from .plotting import *

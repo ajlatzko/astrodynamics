@@ -1,6 +1,6 @@
 from setuptools import setup
 
-VERSION = '0.5.6'
+VERSION = '0.6.0'
 DESCRIPTION = 'Collection of functions used in EAS 4510 and beyond'
 
 setup(name='astrodynamics',
