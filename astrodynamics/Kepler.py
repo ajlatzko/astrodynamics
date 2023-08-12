@@ -23,6 +23,10 @@ def KeplerSolver(e: float, M: float) -> float:
     -------
     `E` (float): The eccentric anomaly at time t [rad]
     
+    References
+    ----------
+    [1] M. A. Murison, "A Practical Method for Solving the Kepler Equation," U.S. Naval Observatory, Washington, D.C., Nov. 6, 2006. [Online]. Available: http://www.alpheratz.net/murison/dynamics/twobody/KeplerIterations_summary.pdf
+    
     Example
     -------
     >>> e = 0.25
@@ -43,7 +47,7 @@ def KeplerSolver(e: float, M: float) -> float:
     # Define helper functions
     def eps3(e, M, x):
         """
-        Returns the third order error in the approximation
+        Returns the third order error in the approximation.
         """
         t1 = math.cos(x)
         t2 = -1 + e * t1
@@ -57,7 +61,7 @@ def KeplerSolver(e: float, M: float) -> float:
     def E0_3(e, M):
         """
         Computes the starting approximation for Kepler's
-        equation using a third order scheme
+        equation using a third order scheme.
         """
         t34 = e ** 2
         t35 = e * t34
